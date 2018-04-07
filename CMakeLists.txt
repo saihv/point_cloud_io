@@ -54,6 +54,10 @@ add_executable(
   src/write_node.cpp
   src/Write.cpp
 )
+add_executable(
+  pctest
+  src/test.cpp
+)
 
 ## Specify libraries to link executable targets against
 target_link_libraries(
@@ -62,5 +66,9 @@ target_link_libraries(
 )
 target_link_libraries(
   write
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(
+  pctest
   ${catkin_LIBRARIES}
 )
